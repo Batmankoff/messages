@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="user">
+          <img
+            class="user__avatar"
+            src="images/avatar-6.jpeg"
+            alt="avatar user"
+          />
+          <h1 class="user__name">Danny Hopkins</h1>
+        </div>
+        <button class="header__search">
+          <img
+            class="header__search-icon"
+            src="images/icon/search.svg"
+            alt="Icon: search"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="talk">
+      <div class="container">
+        <div class="talk__inner">
+          <time class="talk__time" datetime="2023-02-01T12:00"
+            >1 FEB 12:00</time
+          >
+          <p class="talk__message talk__message--interlocutor">
+            I commented on Figma, I want to add some fancy icons. Do you have
+            any icon set?
+          </p>
+          <p class="talk__message talk__message--user">
+            I am in a process of designing some. When do you need them?
+          </p>
+          <p class="talk__message talk__message--interlocutor">Next month?</p>
+          <time class="talk__time" datetime="08:12">08:12</time>
+          <p class="talk__message talk__message--user">
+            I am almost finish. Please give me your email, I will ZIP them and
+            send you as son as im finish.
+          </p>
+          <p class="talk__message talk__message--user">?</p>
+          <time class="talk__time" datetime="08:43">08:43</time>
+          <p class="talk__message talk__message--interlocutor">
+            maciej.kowalski@email.com
+          </p>
+          <p class="talk__message talk__message--user">
+            <svg class="chat__emoji">
+              <use xlink:href="images/emoji/emoji-sprite.svg#ok"></use>
+            </svg>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <form class="message-form" action="#" method="POST">
+        <label class="message-form__attachment">
+          <input type="file" accept="image/*" hidden />
+          <img
+            class="message-form__attachment-img"
+            src="images/icon/camera.svg"
+            alt="Icon: camera"
+          />
+        </label>
+        <input class="message-form__input" placeholder="Message" / >
+        <button class="message-form__submit" type="submit">
+          <img src="images/icon/send.svg" alt="Icon: send" />
+        </button>
+      </form>
+    </div>
+  </footer>
+  <body>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

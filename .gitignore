@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sumblime*
+npm-debug.*
+
+
+node_modules/
+package-lock.json

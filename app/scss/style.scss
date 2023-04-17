@@ -1,0 +1,236 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+/* header */
+.header {
+  padding: 27px 0 9px;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: $bg-primary;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    @extend %poppins-600;
+    font-size: 28px;
+    line-height: 42px;
+  }
+  &__search {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+/* recent */
+.recent {
+  padding: 78px 0 25px;
+  &__title {
+    @extend %poppins-500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.58;
+    margin-bottom: 17px;
+  }
+  &__users {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__users::-webkit-scrollbar {
+    display: none;
+  }
+  &__users::-webkit-scrollbar-track {
+    background-color: none;
+  }
+  &__user {
+    min-width: 65px;
+    &-avatar {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 9px;
+    }
+    &-name {
+      @extend %poppins-400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: $light;
+    }
+  }
+}
+
+/* chats */
+
+.chats {
+  flex-grow: 1;
+  background-color: $bg-secondary;
+  padding: 46px 0 56px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.chat {
+  display: flex;
+  align-items: flex-start;
+  &__avatar {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-right: 18px;
+  }
+  &__info {
+    width: 100%;
+    &-title {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__name {
+    @extend %poppins-600;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: $light;
+  }
+  &__last-message {
+    display: inline-block;
+    color: $primary;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__emoji {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding-left: 6px;
+  }
+  &__timestamp {
+    margin-left: auto;
+    text-transform: capitalize;
+    color: $primary;
+  }
+}
+
+/*user*/
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  &__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+  &__name {
+    @extend %poppins-600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+/*talk*/
+.talk {
+  padding-top: 121px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__time {
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+  }
+  &__message {
+    display: inline-block;
+    max-width: 341px;
+    padding: 10px 21px 10px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    &--interlocutor {
+      margin-right: auto;
+      background-color: #373e4e;
+    }
+    &--user {
+      background-color: #7a8194;
+      margin-left: auto;
+    }
+  }
+}
+/*footer*/
+.footer {
+  padding: 123px 0 37px;
+}
+.message-form {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 7px 8px;
+  border-radius: 25px;
+  background-color: #3d4354;
+  &__attachment {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9398a7;
+    margin-right: 14px;
+    cursor: pointer;
+    &-img {
+      object-fit: cover;
+    }
+  }
+  &__input {
+    color: $light;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    &::placeholder {
+      @extend %mulish-600;
+      font-size: 13px;
+      line-height: 24px;
+      opacity: 0.45;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__submit {
+    margin-left: auto;
+    padding: 0;
+    padding-left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+@import "media";
