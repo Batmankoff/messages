@@ -199,7 +199,7 @@
   border-radius: 25px;
   background-color: #3d4354;
   &__attachment {
-    width: 33px;
+    min-width: 33px;
     height: 33px;
     border-radius: 50%;
     display: flex;
