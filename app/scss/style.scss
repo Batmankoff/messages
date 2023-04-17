@@ -7,7 +7,6 @@
 .header {
   padding: 27px 0 9px;
   position: fixed;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -151,7 +150,7 @@
 }
 /*talk*/
 .talk {
-  padding-top: 121px;
+  padding: 120px 0 120px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -185,7 +184,13 @@
 }
 /*footer*/
 .footer {
-  padding: 123px 0 37px;
+  padding: 37px 0 37px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: $bg-primary;
 }
 .message-form {
   display: flex;
